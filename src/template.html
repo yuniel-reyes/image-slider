@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="arrow arrow-left-container">
+        <img class="each-arrow" src="<%= require('/src/img/arrow-left.svg')%>" alt="">
+    </div>
+    <main id="slider-component-container">        
+        <div id="big-slider-container">
+            <div class="each-image-slide"><img src="<%= require('/src/img/img1.jpg')%>" 
+                alt=""></div>
+            <div class="each-image-slide"><img src="" alt=""></div>
+            <div class="each-image-slide"><img src="" alt=""></div>
+            <div class="each-image-slide"><img src="" alt=""></div>
+        </div>
+        <div id="navigation-circles">
+            <span class="each-circle"></span>
+            <span class="each-circle"></span>
+            <span class="each-circle"></span>
+            <span class="each-circle"></span>
+        </div>
+    </main>
+    <div class="arrow arrow-right-container">
+        <img class="each-arrow" src="<%= require('/src/img/arrow-right.svg')%>" alt="">
+    </div>
+    
+</body>
+</html>
