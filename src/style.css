@@ -14,6 +14,7 @@ body {
 main {
     grid-column-start: 2;
     grid-row-start: 2;
+    width: 1000px;
 }
 
 /* arrows */
@@ -43,9 +44,20 @@ main {
 
 /* image slides */
 
+#framer {
+    display: grid;
+    grid-template-rows: 350px;
+}
 
 #big-slider-container {
-    display: flex;
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.each-image-slide {
+    visibility: hidden;
+    grid-row-start: 1;
+    grid-column-start: 1;
 }
 
 /* navigation circles */
@@ -64,7 +76,7 @@ main {
     border-radius: 80px;
 }
 
-.each-circle:hover {
-    background-color: #424242;
+span.each-circle:hover {
+    background-color: rgb(66, 66, 66) !important;
     cursor: pointer;
 }

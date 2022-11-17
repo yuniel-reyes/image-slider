@@ -24,7 +24,15 @@
 5. Add in some navigation dots at the bottom of the slides. Make a horizontal
    series of empty circles with CSS immediately below the slideshow. Each circle
    represents a slide, so whenever a new slide is activated, its corresponding
-   circle gets filled in so you can tell where in the show you are. Make each circle
-   link to that particular slide, so you can click on the circle and it will jump
-   to that slide.
+   circle gets filled in so you can tell where in the show you are. Make each circle link to that particular slide, so you can click on the circle and it will jump to that slide.
 6. Add a timeout which advances the slides every 5 seconds.
+
+_Discoveries_
+
+The _foreach_ method of the Array object can'b be break, as the
+forEach is a function,and not a loop. If you applied an inline
+CSS property to an element, e.g.
+
+_Questions_
+
+Is it bad practice to style using inline css?
