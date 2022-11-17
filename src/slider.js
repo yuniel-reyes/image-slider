@@ -13,6 +13,9 @@ export default function SLIDER() {
     nodeRef.arrowLeft.addEventListener('click', () => {
       previous();
     });
+    Array.from(nodeRef.circleContanier.children).forEach((circle) => {
+      circle.addEventListener('click', getToNslide);
+    });
   })();
 
   const next = () => {
@@ -71,4 +74,31 @@ export default function SLIDER() {
       return true;
     });
   };
+
+  function getToNslide(e) {
+    // show corresponding image
+    const number = e.target.id.slice(7);
+    let slideCounter = 0;
+    Array.from(nodeRef.slidesContainer.children).every((slide) => {
+      if (slide.id === number) {
+        slide.style.visibility = 'visible';
+        slideCounter++;
+      } else {
+        slide.style.visibility = 'hidden';
+        slideCounter++;
+      }
+      if (slideCounter === 4) {
+        return false;
+      }
+      return true;
+    });
+    // update the circles
+    filleCircle(number);
+  }
+
+  (() => {
+    setInterval(() => {
+      next();
+    }, 4000);
+  })();
 }
